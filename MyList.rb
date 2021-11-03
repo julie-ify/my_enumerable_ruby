@@ -4,7 +4,6 @@ class MyList
   include MyEnumerable
   def initialize(*list)
     @list = list
-    puts @list
   end
 
   def each
