@@ -18,22 +18,22 @@ module MyEnumerable
   def max
     max = 0
     each { |n| max = n if n > max }
-    return max
+    max
   end
 
   def min
     min = +1.0 / 0.0
     each { |n| min = n if n < min }
-    return min
+    min
   end
 
   def sort
     sorted = []
     newlist = @list.dup
-    for x in 1..newlist.count do
+    (1..newlist.count).each do |_x|
       sorted.push(newlist.min)
       newlist.delete(newlist.min)
     end
-    return sorted
+    sorted
   end
 end
